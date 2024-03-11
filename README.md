@@ -1,4 +1,7 @@
 # Đề tài xây dựng ứng dụng nhận diện chữ viết tay tiếng Việt
+- Đề tài này tham khảo từ:
+  -  [VietOCR] https://github.com/pbcquoc/vietocr
+  - [vietnamese-handwriting-recognition-ocr] https://github.com/TomHuynhSG/Vietnamese-Handwriting-Recognition-OCR
 
 Thực hiện: 
 - Nguyễn Minh Cường 20110132
