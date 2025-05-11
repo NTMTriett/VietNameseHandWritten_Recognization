@@ -19,12 +19,6 @@ Optical character recognition là phương pháp chuyển đổi các tài liệ
 - Nhập dữ liệu tự động từ tài liệu.
 - Đọc đồng hồ đo điện.
 - Đọc hộ chiếu và các chứng minh thư.
-#
-## Ảnh cần xử lý
-![alt text](/vietnamese_hcr/raw/data/1525_samples.png)
-![alt text](output.png)
-## Prediction: 286 Phạm Hùng, Xã Hoà Phước, Huyện Hoà Vang, Đà Nẵng
-#
 ## Sử dụng Deep Learning 
  Có hai thuật toán deep learning nổi tiếng cho bài toán nhận dạng văn bản:
  - Convolutional recurrent neural network (CRNN) và CTC loss 
