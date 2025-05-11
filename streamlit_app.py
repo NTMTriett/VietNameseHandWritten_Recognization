@@ -70,7 +70,7 @@ def reset():
     st.session_state.SEGMENTS_IMG = None
     st.session_state.SEGMENTS_ARR = None
     st.session_state.SEGMENTS_PRS = None
-    st.experimental_rerun()
+    st.rerun()
 
 
 def main():
@@ -85,7 +85,7 @@ def main():
                 unsafe_allow_html=True)  # Insert a blank line
     st.markdown('<p style="text-align: justify; font-size:20px;">Hướng dẫn sử dụng: Upload ảnh cần nhận diện sau đó chọn xử lý ảnh đầu vào.' +
                 ' Người dùng có thể thay đổi kích thước (resize) hoặc sử dụng phép co giãn (erosion/dilation) để tăng mức độ chính xác,' +
-                ' ngoài ra sau khi dự đoán người dùng có thể chỉnh sửa kết quả cho chính xác hơn. <a href="https://youtu.be/_PPOj0gDOkI">Hướng dẫn demo</a></p>', unsafe_allow_html=True)
+                ' ngoài ra sau khi dự đoán người dùng có thể chỉnh sửa kết quả cho chính xác hơn.', unsafe_allow_html=True)
 
     st.markdown('<div style="margin-top:2rem"></div>', unsafe_allow_html=True)
 
@@ -106,12 +106,12 @@ def main():
 
             if st.button("Hủy"):
                 st.session_state.RESIZE_ENABLE = False
-                st.experimental_rerun()
+                st.rerun()
         else:
             if st.button("Resize"):
                 st.session_state.MODEL_INPUT = None
                 st.session_state.RESIZE_ENABLE = True
-                st.experimental_rerun()
+                st.rerun()
 
     processed_image_container = st.empty()
     if st.session_state.MODEL_INPUT is not None and st.session_state.SEGMENTS_IMG is None:
@@ -136,7 +136,7 @@ def main():
             st.session_state.IMG_DATA = None
             st.session_state.MODEL_INPUT = None
             st.session_state.PREDICTION_STR = None
-            st.experimental_rerun()
+            st.rerun()
 
     if st.session_state.PREDICTION_MUL is not None:
         st.text(
@@ -150,7 +150,7 @@ def main():
             st.session_state.SIZE_PREDICT = None
             st.session_state.PREDICTION_MUL = None
             st.session_state.OPENCV_IMAGE = None
-            st.experimental_rerun()
+            st.rerun()
 
     # Sidebar
     with st.sidebar:
@@ -197,7 +197,7 @@ def main():
 
         if st.sidebar.button("Reset"):
             reset()
-            st.experimental_rerun()
+            st.rerun()
 
          # Giá trị của slider 1
         param1 = st.sidebar.slider(
@@ -244,7 +244,7 @@ def main():
                         # Dự đoán chuỗi
                         st.session_state.PREDICTION_STR = ocr.prediction_ocr_crnn_ctc(
                             dip.convert_img_to_input(st.session_state.MODEL_INPUT))
-                    st.experimental_rerun()
+                    st.rerun()
                 else:
                     message_container.error(
                         'Vui lòng upload hoặc xử lý ảnh đầu vào')
@@ -264,7 +264,7 @@ def main():
                         image = Image.open(IMAGE_UPLOAD)
                         st.session_state.PREDICTION_STR = ocr.prediction_ocr_vietocr(
                             image)
-                    st.experimental_rerun()
+                    st.rerun()
                 else:
                     message_container.error(
                         'Vui lòng upload hoặc xử lý ảnh đầu vào')
