@@ -59,8 +59,9 @@ x = MaxPool2D(pool_size=(3, 1))(x)
 
 # Lambda được sử dụng để loại bỏ chiều thứ nhất của tensor đầu ra (chiều batch_size)
 # và đưa ra đầu ra có hình dạng (height, width, channels).
-squeezed = Lambda(lambda x: K.squeeze(x, 1))(x)
-
+#squeezed = Lambda(lambda x: K.squeeze(x, 1))(x)
+squeezed = Reshape((240, 1024))(x)
+#squeezed = Lambda(lambda x: K.squeeze(x, 1), output_shape=(None, 240, 1024))(x)
 # Mỗi khối LSTM có 512 đơn vị đầu ra và sử dụng dropout để tránh tình trạng overfitting.
 blstm_1 = Bidirectional(
     LSTM(512, return_sequences=True, dropout=0.2))(squeezed)

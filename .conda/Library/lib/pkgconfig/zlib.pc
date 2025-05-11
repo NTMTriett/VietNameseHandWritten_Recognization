@@ -1,0 +1,13 @@
+prefix=e:/I.T/School_Project/Digital_Image_Processing/CuoiKy/Vietnamese-handwritten-recognition/.conda/Library
+exec_prefix=e:/I.T/School_Project/Digital_Image_Processing/CuoiKy/Vietnamese-handwritten-recognition/.conda/Library
+libdir=e:/I.T/School_Project/Digital_Image_Processing/CuoiKy/Vietnamese-handwritten-recognition/.conda/Library/lib
+sharedlibdir=e:/I.T/School_Project/Digital_Image_Processing/CuoiKy/Vietnamese-handwritten-recognition/.conda/Library/lib
+includedir=e:/I.T/School_Project/Digital_Image_Processing/CuoiKy/Vietnamese-handwritten-recognition/.conda/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

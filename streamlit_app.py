@@ -270,10 +270,9 @@ def main():
                         'Vui lòng upload hoặc xử lý ảnh đầu vào')
 
         st.title("Tên thành viên thực hiện")
-        st.text("20110457 - Trần Tiến Đạt")
-        st.text("20110132 - Nguyễn Minh Cường")
-        st.text("19110202 - Đỗ Thanh Hiếu")
-        st.text("19110037 - Huỳnh Minh Thông")
+        st.text("22110059 - Nguyễn Hà My")
+        st.text("22110053 - Ngô Tường Phát")
+        st.text("20110423 - Nguyễn Thanh Minh Triết")
         st.title("GVHD: PGS.TS Hoàng Văn Dũng")
 
 

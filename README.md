@@ -4,9 +4,9 @@
   - [vietnamese-handwriting-recognition-ocr] https://github.com/TomHuynhSG/Vietnamese-Handwriting-Recognition-OCR
 
 Thực hiện: 
-- Nguyễn Minh Cường 20110132
-- Trần Tiến Đạt - 20110457
-
+- Nguyễn Thanh Minh Triết 20110423
+- Ngô Tường Phát - 22110053
+- Nguyễn Hà My -  22110059   
 ### Công việc cần xử lý
 - Xây dựng model để dự đoán.
 - Xử lý ảnh của người dùng.
